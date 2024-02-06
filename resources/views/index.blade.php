@@ -148,12 +148,12 @@
         .then(response => response.json())
         .then(data => {
             
-            // var iframe = document.createElement('iframe');
-            // iframe.src = data.pdf_url;
-            // iframe.style.width = '100%';
-            // iframe.style.height = '500px';
-            // document.getElementById('pdfContainer').appendChild(iframe);
-            window.open(data.pdf_url, '_blank');
+            var iframe = document.createElement('iframe');
+            iframe.src = data.pdf_url;
+            iframe.style.width = '100%';
+            iframe.style.height = '500px';
+            document.getElementById('pdfContainer').appendChild(iframe);
+            // window.open(data.pdf_url, '_blank');
         })
         .catch(error => {
             console.error('Error:', error);
